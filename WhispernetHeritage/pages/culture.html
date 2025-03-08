@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culture & Stories - WhispernetHeritage</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .story-card {
+            transition: transform 0.2s;
+        }
+        .story-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="../index.html" class="flex-shrink-0 flex items-center">
+                        <span class="text-2xl font-bold text-indigo-600">WhispernetHeritage</span>
+                    </a>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="hidden sm:ml-6 sm:flex sm:items-center space-x-4">
+                    <a href="business.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Business</a>
+                    <a href="culture.html" class="text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Culture</a>
+                    <a href="university.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">University</a>
+                    <a href="urban.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Urban Festival</a>
+                    <a href="cultural.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Cultural Festival</a>
+                    <a href="admin.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Admin</a>
+                </div>
+
+                <!-- Category Filter -->
+                <div class="flex items-center space-x-4">
+                    <select id="categoryFilter" class="bg-gray-100 border border-gray-300 rounded-md px-3 py-1">
+                        <option value="all">All Categories</option>
+                        <option value="folklore">Folklore</option>
+                        <option value="proverbs">Proverbs</option>
+                        <option value="historical">Historical Tales</option>
+                    </select>
+                    <button class="text-gray-400 hover:text-indigo-600">
+                        <i class="fas fa-user-circle text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col md:flex-row gap-8">
+            <!-- Stories Feed -->
+            <div class="md:w-3/4">
+                <!-- Create Story Button -->
+                <div class="mb-6">
+                    <button class="bg-indigo-600 text-white px-6 py-2 rounded-md hover:bg-indigo-700 transition flex items-center">
+                        <i class="fas fa-plus mr-2"></i>
+                        Share Your Story
+                    </button>
+                </div>
+
+                <!-- Stories Grid -->
+                <div class="space-y-6">
+                    <!-- Story Card 1 -->
+                    <div class="story-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="p-6">
+                            <!-- Author Info -->
+                            <div class="flex items-center mb-4">
+                                <img src="https://via.placeholder.com/40" alt="Author" class="rounded-full">
+                                <div class="ml-3">
+                                    <h3 class="font-medium">John Doe</h3>
+                                    <p class="text-sm text-gray-500">2 hours ago</p>
+                                </div>
+                                <!-- Moderation Options -->
+                                <div class="ml-auto">
+                                    <button class="text-gray-400 hover:text-gray-600">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Story Content -->
+                            <h2 class="text-xl font-semibold mb-3">The Legend of the Sacred Forest</h2>
+                            <p class="text-gray-600 mb-4">
+                                Deep in the heart of our ancestral lands lies a forest that holds secrets passed down through generations...
+                            </p>
+                            <div class="mb-4">
+                                <img src="https://via.placeholder.com/600x300" alt="Story Image" class="rounded-lg w-full">
+                            </div>
+
+                            <!-- Interaction Buttons -->
+                            <div class="flex items-center justify-between">
+                                <div class="flex space-x-4">
+                                    <button class="flex items-center text-gray-500 hover:text-indigo-600">
+                                        <i class="far fa-heart mr-1"></i>
+                                        <span>245</span>
+                                    </button>
+                                    <button class="flex items-center text-gray-500 hover:text-indigo-600">
+                                        <i class="far fa-comment mr-1"></i>
+                                        <span>18</span>
+                                    </button>
+                                    <button class="flex items-center text-gray-500 hover:text-indigo-600">
+                                        <i class="far fa-share-square mr-1"></i>
+                                        <span>Share</span>
+                                    </button>
+                                </div>
+                                <button class="text-red-500 hover:text-red-600">
+                                    <i class="far fa-flag"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Story Card 2 -->
+                    <div class="story-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="p-6">
+                            <!-- Author Info -->
+                            <div class="flex items-center mb-4">
+                                <img src="https://via.placeholder.com/40" alt="Author" class="rounded-full">
+                                <div class="ml-3">
+                                    <h3 class="font-medium">Sarah Smith</h3>
+                                    <p class="text-sm text-gray-500">5 hours ago</p>
+                                </div>
+                                <div class="ml-auto">
+                                    <button class="text-gray-400 hover:text-gray-600">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Story Content -->
+                            <h2 class="text-xl font-semibold mb-3">Ancient Proverbs of Wisdom</h2>
+                            <p class="text-gray-600 mb-4">
+                                Our elders always say, "The river that forgets its source will soon dry up." This proverb teaches us...
+                            </p>
+
+                            <!-- Interaction Buttons -->
+                            <div class="flex items-center justify-between">
+                                <div class="flex space-x-4">
+                                    <button class="flex items-center text-gray-500 hover:text-indigo-600">
+                                        <i class="far fa-heart mr-1"></i>
+                                        <span>182</span>
+                                    </button>
+                                    <button class="flex items-center text-gray-500 hover:text-indigo-600">
+                                        <i class="far fa-comment mr-1"></i>
+                                        <span>24</span>
+                                    </button>
+                                    <button class="flex items-center text-gray-500 hover:text-indigo-600">
+                                        <i class="far fa-share-square mr-1"></i>
+                                        <span>Share</span>
+                                    </button>
+                                </div>
+                                <button class="text-red-500 hover:text-red-600">
+                                    <i class="far fa-flag"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="md:w-1/4">
+                <!-- Top Contributors -->
+                <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                    <h2 class="text-xl font-semibold mb-4">Top Contributors</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <img src="https://via.placeholder.com/32" alt="Contributor" class="rounded-full">
+                            <div class="ml-3">
+                                <h3 class="font-medium">John Doe</h3>
+                                <p class="text-sm text-gray-500">324 stories</p>
+                            </div>
+                            <div class="ml-auto">
+                                <span class="text-indigo-600">
+                                    <i class="fas fa-crown"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <img src="https://via.placeholder.com/32" alt="Contributor" class="rounded-full">
+                            <div class="ml-3">
+                                <h3 class="font-medium">Sarah Smith</h3>
+                                <p class="text-sm text-gray-500">256 stories</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <img src="https://via.placeholder.com/32" alt="Contributor" class="rounded-full">
+                            <div class="ml-3">
+                                <h3 class="font-medium">Mike Johnson</h3>
+                                <p class="text-sm text-gray-500">198 stories</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Popular Tags -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-xl font-semibold mb-4">Popular Tags</h2>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">#Folklore</span>
+                        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">#Traditions</span>
+                        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">#Culture</span>
+                        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">#History</span>
+                        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">#Heritage</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Category Filter Functionality
+        const categoryFilter = document.getElementById('categoryFilter');
+        categoryFilter.addEventListener('change', function() {
+            // Filter stories based on selected category
+            console.log('Selected category:', this.value);
+        });
+
+        // Like Button Functionality
+        document.querySelectorAll('.fa-heart').forEach(heart => {
+            heart.addEventListener('click', function() {
+                this.classList.toggle('fas');
+                this.classList.toggle('far');
+            });
+        });
+    </script>
+</body>
+</html>

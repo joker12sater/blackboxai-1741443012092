@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Festival - WhispernetHeritage</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .cultural-card {
+            transition: transform 0.2s;
+        }
+        .cultural-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="../index.html" class="flex-shrink-0 flex items-center">
+                        <span class="text-2xl font-bold text-indigo-600">WhispernetHeritage</span>
+                    </a>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="hidden sm:ml-6 sm:flex sm:items-center space-x-4">
+                    <a href="business.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Business</a>
+                    <a href="culture.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Culture</a>
+                    <a href="university.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">University</a>
+                    <a href="urban.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Urban Festival</a>
+                    <a href="cultural.html" class="text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Cultural Festival</a>
+                    <a href="admin.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Admin</a>
+                </div>
+
+                <!-- Cultural Controls -->
+                <div class="flex items-center space-x-4">
+                    <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                        <i class="fas fa-plus mr-2"></i>Share Story
+                    </button>
+                    <button class="text-gray-400 hover:text-indigo-600">
+                        <i class="fas fa-user-circle text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Traditional Stories & Proverbs -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Traditional Stories & Proverbs</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Story Card -->
+                <div class="cultural-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://via.placeholder.com/400x200" alt="Story Image" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">The Wise Elder's Tale</h3>
+                        <p class="text-gray-600 mb-4">A story about wisdom passed down through generations...</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">Shared by Elder Kimani</span>
+                            <button class="text-indigo-600 hover:text-indigo-800">Read More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proverb Card -->
+                <div class="cultural-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://via.placeholder.com/400x200" alt="Proverb Image" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Unity Proverbs</h3>
+                        <p class="text-gray-600 mb-4">Collection of proverbs about community and togetherness...</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">Curated by Community</span>
+                            <button class="text-indigo-600 hover:text-indigo-800">Explore</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Historical Tale Card -->
+                <div class="cultural-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://via.placeholder.com/400x200" alt="Historical Tale Image" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Origins of Our People</h3>
+                        <p class="text-gray-600 mb-4">The epic journey of our ancestors through time...</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">Historical Archive</span>
+                            <button class="text-indigo-600 hover:text-indigo-800">Discover</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wazee Barazas Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Wazee Barazas (Elders' Forums)</h2>
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <!-- Discussion Topics -->
+                <div class="mb-8">
+                    <h3 class="text-lg font-semibold mb-4">Active Discussions</h3>
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-indigo-500 pl-4 py-2">
+                            <h4 class="font-medium">Traditional Marriage Customs</h4>
+                            <p class="text-sm text-gray-600 mb-2">Discussion on evolving marriage traditions...</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <span class="mr-4"><i class="fas fa-users mr-1"></i>15 Participants</span>
+                                <span><i class="fas fa-comment mr-1"></i>32 Responses</span>
+                            </div>
+                        </div>
+                        <div class="border-l-4 border-indigo-500 pl-4 py-2">
+                            <h4 class="font-medium">Cultural Preservation Methods</h4>
+                            <p class="text-sm text-gray-600 mb-2">Sharing knowledge on preserving our heritage...</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <span class="mr-4"><i class="fas fa-users mr-1"></i>23 Participants</span>
+                                <span><i class="fas fa-comment mr-1"></i>45 Responses</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Start New Discussion -->
+                <button class="w-full bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                    Start New Discussion
+                </button>
+            </div>
+        </section>
+
+        <!-- Dictionary & Consultation -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <!-- Cultural Dictionary -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Cultural Dictionary</h2>
+                <div class="mb-6">
+                    <div class="relative">
+                        <input type="text" placeholder="Search cultural terms..." class="w-full border rounded-md pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center">
+                            <i class="fas fa-search text-gray-400"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="border-b pb-4">
+                        <h3 class="font-medium mb-1">Baraza</h3>
+                        <p class="text-sm text-gray-600">A community meeting or gathering place for discussions.</p>
+                    </div>
+                    <div class="border-b pb-4">
+                        <h3 class="font-medium mb-1">Mzee</h3>
+                        <p class="text-sm text-gray-600">A term of respect for elders in the community.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Consultation Forum -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Ask Cultural Experts</h2>
+                <div class="space-y-6">
+                    <!-- Question Form -->
+                    <div class="mb-6">
+                        <textarea placeholder="Ask your question..." class="w-full border rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-indigo-500" rows="4"></textarea>
+                        <button class="mt-2 bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                            Submit Question
+                        </button>
+                    </div>
+
+                    <!-- Recent Questions -->
+                    <div>
+                        <h3 class="font-semibold mb-4">Recent Questions</h3>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-green-500 pl-4 py-2">
+                                <p class="text-sm mb-2">What is the significance of traditional naming ceremonies?</p>
+                                <span class="text-xs text-gray-500">Answered by Elder Wanjiku • 2 days ago</span>
+                            </div>
+                            <div class="border-l-4 border-yellow-500 pl-4 py-2">
+                                <p class="text-sm mb-2">How are traditional conflict resolution methods practiced today?</p>
+                                <span class="text-xs text-gray-500">Pending Answer • 1 day ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Traditional Dances & Performances -->
+        <section>
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Traditional Dances & Performances</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Performance Card -->
+                <div class="cultural-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative">
+                        <img src="https://via.placeholder.com/400x225" alt="Dance Performance" class="w-full">
+                        <button class="absolute inset-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition">
+                            <i class="fas fa-play text-white text-4xl"></i>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-medium mb-2">Traditional Harvest Dance</h3>
+                        <p class="text-sm text-gray-600">A celebration of abundance and gratitude</p>
+                    </div>
+                </div>
+
+                <!-- Performance Card -->
+                <div class="cultural-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative">
+                        <img src="https://via.placeholder.com/400x225" alt="Dance Performance" class="w-full">
+                        <button class="absolute inset-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition">
+                            <i class="fas fa-play text-white text-4xl"></i>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-medium mb-2">Warrior Dance Ceremony</h3>
+                        <p class="text-sm text-gray-600">Showcasing strength and unity</p>
+                    </div>
+                </div>
+
+                <!-- Performance Card -->
+                <div class="cultural-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative">
+                        <img src="https://via.placeholder.com/400x225" alt="Dance Performance" class="w-full">
+                        <button class="absolute inset-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition">
+                            <i class="fas fa-play text-white text-4xl"></i>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-medium mb-2">Wedding Celebration Dance</h3>
+                        <p class="text-sm text-gray-600">Traditional marriage ceremonies</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Search functionality for dictionary
+        const searchInput = document.querySelector('input[type="search"]');
+        searchInput.addEventListener('input', function(e) {
+            // Implement search functionality
+            console.log('Searching for:', e.target.value);
+        });
+
+        // Question submission
+        const questionForm = document.querySelector('textarea');
+        questionForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Implement question submission
+            console.log('Question submitted:', questionForm.value);
+        });
+    </script>
+</body>
+</html>

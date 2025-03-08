@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - WhispernetHeritage</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .stat-card {
+            transition: transform 0.2s;
+        }
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="../index.html" class="flex-shrink-0 flex items-center">
+                        <span class="text-2xl font-bold text-indigo-600">WhispernetHeritage</span>
+                    </a>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="hidden sm:ml-6 sm:flex sm:items-center space-x-4">
+                    <a href="business.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Business</a>
+                    <a href="culture.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Culture</a>
+                    <a href="university.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">University</a>
+                    <a href="urban.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Urban Festival</a>
+                    <a href="cultural.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Cultural Festival</a>
+                    <a href="admin.html" class="text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Admin</a>
+                </div>
+
+                <!-- Admin Controls -->
+                <div class="flex items-center space-x-4">
+                    <button class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition">
+                        <i class="fas fa-bell mr-2"></i>Notifications
+                    </button>
+                    <button class="text-gray-400 hover:text-indigo-600">
+                        <i class="fas fa-user-shield text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Dashboard Overview -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Dashboard Overview</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Stats Cards -->
+                <div class="stat-card bg-white rounded-lg shadow-md p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg font-semibold">Total Users</h3>
+                        <i class="fas fa-users text-indigo-600 text-xl"></i>
+                    </div>
+                    <p class="text-3xl font-bold text-gray-900">12,543</p>
+                    <p class="text-sm text-green-600 mt-2">
+                        <i class="fas fa-arrow-up mr-1"></i>+15% this month
+                    </p>
+                </div>
+
+                <div class="stat-card bg-white rounded-lg shadow-md p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg font-semibold">Active Stories</h3>
+                        <i class="fas fa-book-open text-indigo-600 text-xl"></i>
+                    </div>
+                    <p class="text-3xl font-bold text-gray-900">3,287</p>
+                    <p class="text-sm text-green-600 mt-2">
+                        <i class="fas fa-arrow-up mr-1"></i>+8% this week
+                    </p>
+                </div>
+
+                <div class="stat-card bg-white rounded-lg shadow-md p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg font-semibold">Revenue</h3>
+                        <i class="fas fa-dollar-sign text-indigo-600 text-xl"></i>
+                    </div>
+                    <p class="text-3xl font-bold text-gray-900">$45,892</p>
+                    <p class="text-sm text-green-600 mt-2">
+                        <i class="fas fa-arrow-up mr-1"></i>+12% this month
+                    </p>
+                </div>
+
+                <div class="stat-card bg-white rounded-lg shadow-md p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg font-semibold">Pending Reports</h3>
+                        <i class="fas fa-flag text-red-600 text-xl"></i>
+                    </div>
+                    <p class="text-3xl font-bold text-gray-900">24</p>
+                    <p class="text-sm text-red-600 mt-2">
+                        <i class="fas fa-arrow-up mr-1"></i>+5 new reports
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Moderation -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Content Moderation</h2>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-semibold">Reported Content</h3>
+                        <div class="flex space-x-2">
+                            <button class="bg-gray-100 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-200 transition">
+                                Filter
+                            </button>
+                            <button class="bg-gray-100 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-200 transition">
+                                Export
+                            </button>
+                        </div>
+                    </div>
+                    <table class="min-w-full">
+                        <thead>
+                            <tr class="bg-gray-50">
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Content</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Type</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Reports</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm font-medium text-gray-900">Inappropriate Comment</div>
+                                    <div class="text-sm text-gray-500">Posted by: user123</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">
+                                        Comment
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                    5 reports
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">
+                                        Pending
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                    <button class="text-red-600 hover:text-red-900 mr-3">Remove</button>
+                                    <button class="text-green-600 hover:text-green-900">Approve</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Subscription Management -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Subscription Management</h2>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-semibold">Active Subscriptions</h3>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                            Add New Plan
+                        </button>
+                    </div>
+                    <table class="min-w-full">
+                        <thead>
+                            <tr class="bg-gray-50">
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">User</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Plan</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Revenue</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="flex-shrink-0 h-10 w-10">
+                                            <img class="h-10 w-10 rounded-full" src="https://via.placeholder.com/40" alt="">
+                                        </div>
+                                        <div class="ml-4">
+                                            <div class="text-sm font-medium text-gray-900">John Smith</div>
+                                            <div class="text-sm text-gray-500">john@example.com</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                        Premium
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                        Active
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                    $29.99/month
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                    <button class="text-indigo-600 hover:text-indigo-900">Edit</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Analytics & Reports -->
+        <section>
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Analytics & Reports</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- User Growth Chart -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-semibold mb-4">User Growth</h3>
+                    <div class="h-64 bg-gray-100 rounded-lg">
+                        <!-- Placeholder for chart -->
+                        <div class="w-full h-full flex items-center justify-center text-gray-500">
+                            Chart Placeholder
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Revenue Chart -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-semibold mb-4">Revenue Overview</h3>
+                    <div class="h-64 bg-gray-100 rounded-lg">
+                        <!-- Placeholder for chart -->
+                        <div class="w-full h-full flex items-center justify-center text-gray-500">
+                            Chart Placeholder
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Add interactivity to stats cards
+        document.querySelectorAll('.stat-card').forEach(card => {
+            card.addEventListener('mouseover', function() {
+                this.classList.add('shadow-lg');
+            });
+            card.addEventListener('mouseout', function() {
+                this.classList.remove('shadow-lg');
+            });
+        });
+
+        // Add functionality to filter buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                console.log('Button clicked:', this.textContent.trim());
+            });
+        });
+    </script>
+</body>
+</html>

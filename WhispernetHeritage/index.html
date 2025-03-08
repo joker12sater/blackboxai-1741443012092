@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhispernetHeritage - Connect with Culture</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <!-- Logo & Brand -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <span class="text-2xl font-bold text-indigo-600">WhispernetHeritage</span>
+                    </div>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="flex-1 flex items-center justify-center px-2 lg:ml-6 lg:justify-end">
+                    <div class="max-w-lg w-full lg:max-w-xs">
+                        <label for="search" class="sr-only">Search</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i class="fas fa-search text-gray-400"></i>
+                            </div>
+                            <input id="search" class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Search" type="search">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Items -->
+                <div class="hidden sm:ml-6 sm:flex sm:items-center space-x-4">
+                    <a href="pages/business.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Business</a>
+                    <a href="pages/culture.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Culture</a>
+                    <a href="pages/university.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">University</a>
+                    <a href="pages/urban.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Urban Festival</a>
+                    <a href="pages/cultural.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Cultural Festival</a>
+                    <a href="pages/admin.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Admin</a>
+                    
+                    <!-- User Profile & Notifications -->
+                    <div class="flex items-center space-x-4">
+                        <button class="text-gray-400 hover:text-indigo-600">
+                            <i class="fas fa-bell text-xl"></i>
+                        </button>
+                        <button class="text-gray-400 hover:text-indigo-600">
+                            <i class="fas fa-user-circle text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="flex items-center sm:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Featured Content -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Featured Content</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Trending Stories -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Trending Stories</h3>
+                        <p class="text-gray-600">Discover the latest trending stories from our community.</p>
+                        <button class="mt-4 bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                            Read More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Business Highlights -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Business Highlights</h3>
+                        <p class="text-gray-600">Explore successful businesses in our community.</p>
+                        <button class="mt-4 bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Festival Updates -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Festival Updates</h3>
+                        <p class="text-gray-600">Stay updated with the latest festival news and events.</p>
+                        <button class="mt-4 bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                            View Updates
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Access -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Quick Access</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <button class="flex items-center justify-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition">
+                    <i class="fas fa-edit mr-2"></i>
+                    Post Story
+                </button>
+                <button class="flex items-center justify-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition">
+                    <i class="fas fa-comments mr-2"></i>
+                    Join Chat
+                </button>
+                <button class="flex items-center justify-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition">
+                    <i class="fas fa-ticket-alt mr-2"></i>
+                    Buy Tickets
+                </button>
+                <button class="flex items-center justify-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition">
+                    <i class="fas fa-bell mr-2"></i>
+                    Subscribe
+                </button>
+            </div>
+        </section>
+
+        <!-- Latest News & Events -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Latest News & Events</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-semibold mb-4">Cultural Festival 2024</h3>
+                    <p class="text-gray-600 mb-4">Join us for the biggest cultural celebration of the year.</p>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="far fa-calendar mr-2"></i>
+                        March 15, 2024
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-semibold mb-4">Urban Art Exhibition</h3>
+                    <p class="text-gray-600 mb-4">Experience the fusion of traditional and modern art.</p>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="far fa-calendar mr-2"></i>
+                        April 2, 2024
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Polls -->
+        <section>
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Community Polls</h2>
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-lg font-semibold mb-4">What's your favorite cultural event?</h3>
+                <form class="space-y-4">
+                    <div class="flex items-center">
+                        <input type="radio" id="festival" name="poll" class="mr-3">
+                        <label for="festival">Cultural Festival</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="radio" id="exhibition" name="poll" class="mr-3">
+                        <label for="exhibition">Art Exhibition</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="radio" id="performance" name="poll" class="mr-3">
+                        <label for="performance">Traditional Performance</label>
+                    </div>
+                    <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                        Vote Now
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">About Us</h3>
+                    <p class="text-gray-400">Connecting communities through culture and heritage.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Events</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Business</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Culture</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="text-gray-400">Email: info@whispernetheritage.com</li>
+                        <li class="text-gray-400">Phone: +1 234 567 890</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center">
+                <p class="text-gray-400">&copy; 2024 WhispernetHeritage. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

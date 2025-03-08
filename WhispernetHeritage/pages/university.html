@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Vibes - WhispernetHeritage</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chat-message {
+            max-width: 80%;
+        }
+        .message-received {
+            background-color: #f3f4f6;
+            border-radius: 1rem 1rem 1rem 0;
+        }
+        .message-sent {
+            background-color: #4f46e5;
+            color: white;
+            border-radius: 1rem 1rem 0 1rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="../index.html" class="flex-shrink-0 flex items-center">
+                        <span class="text-2xl font-bold text-indigo-600">WhispernetHeritage</span>
+                    </a>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="hidden sm:ml-6 sm:flex sm:items-center space-x-4">
+                    <a href="business.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Business</a>
+                    <a href="culture.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Culture</a>
+                    <a href="university.html" class="text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">University</a>
+                    <a href="urban.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Urban Festival</a>
+                    <a href="cultural.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Cultural Festival</a>
+                    <a href="admin.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Admin</a>
+                </div>
+
+                <!-- User Controls -->
+                <div class="flex items-center space-x-4">
+                    <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                        Start New Chat
+                    </button>
+                    <button class="text-gray-400 hover:text-indigo-600">
+                        <i class="fas fa-user-circle text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Chat Section -->
+            <div class="lg:w-2/3">
+                <!-- Chat Tabs -->
+                <div class="bg-white rounded-lg shadow-md mb-6">
+                    <div class="border-b">
+                        <nav class="flex -mb-px">
+                            <a href="#" class="w-1/4 py-4 px-1 text-center border-b-2 border-indigo-500 font-medium text-sm text-indigo-600">
+                                Public Rooms
+                            </a>
+                            <a href="#" class="w-1/4 py-4 px-1 text-center border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                                Private Chats
+                            </a>
+                            <a href="#" class="w-1/4 py-4 px-1 text-center border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                                Live Chats
+                            </a>
+                            <a href="#" class="w-1/4 py-4 px-1 text-center border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                                Video Calls
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- Chat Interface -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <!-- Chat Header -->
+                    <div class="p-4 border-b bg-gray-50">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0">
+                                <img class="h-10 w-10 rounded-full" src="https://via.placeholder.com/40" alt="Chat Room">
+                            </div>
+                            <div class="ml-3">
+                                <div class="text-lg font-medium text-gray-900">Campus Life Discussion</div>
+                                <div class="text-sm text-gray-500">42 participants</div>
+                            </div>
+                            <div class="ml-auto">
+                                <button class="text-gray-400 hover:text-gray-600">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chat Messages -->
+                    <div class="h-96 overflow-y-auto p-4 space-y-4">
+                        <!-- Received Message -->
+                        <div class="flex items-start">
+                            <img class="h-8 w-8 rounded-full" src="https://via.placeholder.com/32" alt="User">
+                            <div class="ml-2 chat-message message-received p-3">
+                                <p class="text-sm font-medium text-gray-900">Sarah Johnson</p>
+                                <p class="text-sm text-gray-700">Has anyone attended the cultural festival last week?</p>
+                                <p class="text-xs text-gray-500 mt-1">10:30 AM</p>
+                            </div>
+                        </div>
+
+                        <!-- Sent Message -->
+                        <div class="flex items-start justify-end">
+                            <div class="chat-message message-sent p-3">
+                                <p class="text-sm">Yes! It was amazing. The traditional dances were spectacular!</p>
+                                <p class="text-xs text-indigo-100 mt-1">10:32 AM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chat Input -->
+                    <div class="p-4 border-t">
+                        <div class="flex items-center">
+                            <button class="text-gray-400 hover:text-gray-600 mr-2">
+                                <i class="fas fa-paperclip"></i>
+                            </button>
+                            <input type="text" placeholder="Type your message..." class="flex-1 border rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            <button class="ml-2 bg-indigo-600 text-white rounded-full p-2 hover:bg-indigo-700">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alumni Corner -->
+            <div class="lg:w-1/3 space-y-6">
+                <!-- Alumni Search -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-xl font-semibold mb-4">Alumni Network</h2>
+                    <div class="relative">
+                        <input type="text" placeholder="Search alumni..." class="w-full border rounded-md pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-search text-gray-400"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Alumni -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-xl font-semibold mb-4">Featured Alumni</h2>
+                    <div class="space-y-4">
+                        <!-- Alumni Card -->
+                        <div class="border rounded-lg p-4">
+                            <div class="flex items-center mb-3">
+                                <img src="https://via.placeholder.com/48" alt="Alumni" class="rounded-full">
+                                <div class="ml-3">
+                                    <h3 class="font-medium">Dr. James Wilson</h3>
+                                    <p class="text-sm text-gray-500">Class of 2015</p>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">Cultural Heritage Researcher at National Museum</p>
+                            <button class="w-full bg-indigo-100 text-indigo-600 px-4 py-2 rounded-md hover:bg-indigo-200 transition">
+                                Connect
+                            </button>
+                        </div>
+
+                        <!-- Alumni Card -->
+                        <div class="border rounded-lg p-4">
+                            <div class="flex items-center mb-3">
+                                <img src="https://via.placeholder.com/48" alt="Alumni" class="rounded-full">
+                                <div class="ml-3">
+                                    <h3 class="font-medium">Prof. Emily Chen</h3>
+                                    <p class="text-sm text-gray-500">Class of 2010</p>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">Cultural Studies Professor at Heritage University</p>
+                            <button class="w-full bg-indigo-100 text-indigo-600 px-4 py-2 rounded-md hover:bg-indigo-200 transition">
+                                Connect
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upcoming Events -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-xl font-semibold mb-4">Upcoming Alumni Events</h2>
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-indigo-500 pl-4">
+                            <h3 class="font-medium">Alumni Networking Night</h3>
+                            <p class="text-sm text-gray-500">March 15, 2024 • 6:00 PM</p>
+                        </div>
+                        <div class="border-l-4 border-indigo-500 pl-4">
+                            <h3 class="font-medium">Cultural Heritage Workshop</h3>
+                            <p class="text-sm text-gray-500">March 20, 2024 • 2:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Chat Tabs Functionality
+        document.querySelectorAll('nav a').forEach(tab => {
+            tab.addEventListener('click', function(e) {
+                e.preventDefault();
+                // Remove active state from all tabs
+                document.querySelectorAll('nav a').forEach(t => {
+                    t.classList.remove('border-indigo-500', 'text-indigo-600');
+                    t.classList.add('border-transparent', 'text-gray-500');
+                });
+                // Add active state to clicked tab
+                this.classList.remove('border-transparent', 'text-gray-500');
+                this.classList.add('border-indigo-500', 'text-indigo-600');
+            });
+        });
+    </script>
+</body>
+</html>

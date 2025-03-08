@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Festival - WhispernetHeritage</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Leaflet CSS for Interactive Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        #map {
+            height: 400px;
+            width: 100%;
+            border-radius: 0.5rem;
+        }
+        .post-card {
+            transition: transform 0.2s;
+        }
+        .post-card:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="../index.html" class="flex-shrink-0 flex items-center">
+                        <span class="text-2xl font-bold text-indigo-600">WhispernetHeritage</span>
+                    </a>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="hidden sm:ml-6 sm:flex sm:items-center space-x-4">
+                    <a href="business.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Business</a>
+                    <a href="culture.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Culture</a>
+                    <a href="university.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">University</a>
+                    <a href="urban.html" class="text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Urban Festival</a>
+                    <a href="cultural.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Cultural Festival</a>
+                    <a href="admin.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Admin</a>
+                </div>
+
+                <!-- Festival Controls -->
+                <div class="flex items-center space-x-4">
+                    <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                        <i class="fas fa-plus mr-2"></i>Share Update
+                    </button>
+                    <button class="text-gray-400 hover:text-indigo-600">
+                        <i class="fas fa-user-circle text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Festival Map Section -->
+        <section class="mb-12">
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-2xl font-bold text-gray-900">Interactive Festival Map</h2>
+                    <div class="flex space-x-2">
+                        <button class="bg-gray-100 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-200 transition">
+                            <i class="fas fa-location-dot mr-2"></i>My Location
+                        </button>
+                        <button class="bg-gray-100 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-200 transition">
+                            <i class="fas fa-filter mr-2"></i>Filter
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Map Container -->
+                <div id="map" class="mb-4"></div>
+
+                <!-- Map Legend -->
+                <div class="flex flex-wrap gap-4 text-sm">
+                    <div class="flex items-center">
+                        <span class="w-3 h-3 bg-red-500 rounded-full mr-2"></span>
+                        Main Stage
+                    </div>
+                    <div class="flex items-center">
+                        <span class="w-3 h-3 bg-blue-500 rounded-full mr-2"></span>
+                        Food Vendors
+                    </div>
+                    <div class="flex items-center">
+                        <span class="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
+                        Art Installations
+                    </div>
+                    <div class="flex items-center">
+                        <span class="w-3 h-3 bg-yellow-500 rounded-full mr-2"></span>
+                        Rest Areas
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Wall and VIP Content -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Social Wall -->
+            <div class="lg:col-span-2 space-y-6">
+                <h2 class="text-2xl font-bold text-gray-900">Social Wall</h2>
+
+                <!-- Post Creation Card -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://via.placeholder.com/40" alt="User" class="rounded-full">
+                        <input type="text" placeholder="Share your festival experience..." class="ml-3 flex-1 bg-gray-100 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="flex space-x-4">
+                            <button class="text-gray-500 hover:text-indigo-600">
+                                <i class="fas fa-camera mr-1"></i>Photo
+                            </button>
+                            <button class="text-gray-500 hover:text-indigo-600">
+                                <i class="fas fa-video mr-1"></i>Video
+                            </button>
+                            <button class="text-gray-500 hover:text-indigo-600">
+                                <i class="fas fa-map-marker-alt mr-1"></i>Location
+                            </button>
+                        </div>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                            Post
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Social Posts -->
+                <div class="space-y-6">
+                    <!-- Post Card -->
+                    <div class="post-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <img src="https://via.placeholder.com/40" alt="User" class="rounded-full">
+                                <div class="ml-3">
+                                    <h3 class="font-medium">Maria Garcia</h3>
+                                    <p class="text-sm text-gray-500">15 minutes ago</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-4">Amazing performance at the main stage! The fusion of traditional and modern dance was incredible! 🎭✨</p>
+                            <img src="https://via.placeholder.com/600x400" alt="Festival Photo" class="rounded-lg w-full mb-4">
+                            <div class="flex items-center justify-between">
+                                <div class="flex space-x-4">
+                                    <button class="flex items-center text-gray-500 hover:text-indigo-600">
+                                        <i class="far fa-thumbs-up mr-1"></i>
+                                        <span>245</span>
+                                    </button>
+                                    <button class="flex items-center text-gray-500 hover:text-indigo-600">
+                                        <i class="far fa-comment mr-1"></i>
+                                        <span>18</span>
+                                    </button>
+                                    <button class="flex items-center text-gray-500 hover:text-indigo-600">
+                                        <i class="far fa-share-square mr-1"></i>
+                                        <span>Share</span>
+                                    </button>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-sm text-gray-500 mr-2">
+                                        <i class="fas fa-map-marker-alt mr-1"></i>Main Stage
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Post Card -->
+                    <div class="post-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <img src="https://via.placeholder.com/40" alt="User" class="rounded-full">
+                                <div class="ml-3">
+                                    <h3 class="font-medium">Alex Kim</h3>
+                                    <p class="text-sm text-gray-500">45 minutes ago</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-4">Found this amazing food vendor! The traditional street food with a modern twist is a must-try! 🍜</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex space-x-4">
+                                    <button class="flex items-center text-gray-500 hover:text-indigo-600">
+                                        <i class="far fa-thumbs-up mr-1"></i>
+                                        <span>182</span>
+                                    </button>
+                                    <button class="flex items-center text-gray-500 hover:text-indigo-600">
+                                        <i class="far fa-comment mr-1"></i>
+                                        <span>24</span>
+                                    </button>
+                                    <button class="flex items-center text-gray-500 hover:text-indigo-600">
+                                        <i class="far fa-share-square mr-1"></i>
+                                        <span>Share</span>
+                                    </button>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-sm text-gray-500 mr-2">
+                                        <i class="fas fa-map-marker-alt mr-1"></i>Food Court
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VIP & Exclusive Content -->
+            <div class="space-y-6">
+                <h2 class="text-2xl font-bold text-gray-900">VIP Access</h2>
+                
+                <!-- Live Stream -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative">
+                        <img src="https://via.placeholder.com/400x225" alt="Live Stream" class="w-full">
+                        <div class="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded-md text-sm">
+                            LIVE
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-medium mb-2">Backstage Pass: Main Stage</h3>
+                        <p class="text-sm text-gray-500">Watch exclusive behind-the-scenes content</p>
+                    </div>
+                </div>
+
+                <!-- Upcoming VIP Events -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="font-semibold mb-4">Upcoming VIP Events</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                            <div class="ml-3">
+                                <h4 class="font-medium">Artist Meet & Greet</h4>
+                                <p class="text-sm text-gray-500">Today, 5:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                            <div class="ml-3">
+                                <h4 class="font-medium">Exclusive Workshop</h4>
+                                <p class="text-sm text-gray-500">Tomorrow, 2:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Festival Updates -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="font-semibold mb-4">Latest Updates</h3>
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-indigo-500 pl-3">
+                            <p class="text-sm">Main Stage schedule updated. Check the new lineup!</p>
+                            <p class="text-xs text-gray-500">10 minutes ago</p>
+                        </div>
+                        <div class="border-l-4 border-indigo-500 pl-3">
+                            <p class="text-sm">New food vendors added to the Food Court area.</p>
+                            <p class="text-xs text-gray-500">1 hour ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Leaflet JS for Interactive Map -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        // Initialize map
+        const map = L.map('map').setView([51.505, -0.09], 13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Add markers for different locations
+        const mainStage = L.marker([51.505, -0.09]).addTo(map)
+            .bindPopup('Main Stage');
+        const foodCourt = L.marker([51.506, -0.095]).addTo(map)
+            .bindPopup('Food Court');
+        const artGallery = L.marker([51.504, -0.085]).addTo(map)
+            .bindPopup('Art Installations');
+
+        // Like button functionality
+        document.querySelectorAll('.fa-thumbs-up').forEach(thumb => {
+            thumb.addEventListener('click', function() {
+                this.classList.toggle('fas');
+                this.classList.toggle('far');
+            });
+        });
+    </script>
+</body>
+</html>

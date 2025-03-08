@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Dashboard - WhispernetHeritage</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="../index.html" class="flex-shrink-0 flex items-center">
+                        <span class="text-2xl font-bold text-indigo-600">WhispernetHeritage</span>
+                    </a>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="hidden sm:ml-6 sm:flex sm:items-center space-x-4">
+                    <a href="business.html" class="text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Business</a>
+                    <a href="culture.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Culture</a>
+                    <a href="university.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">University</a>
+                    <a href="urban.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Urban Festival</a>
+                    <a href="cultural.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Cultural Festival</a>
+                    <a href="admin.html" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">Admin</a>
+                </div>
+
+                <!-- User Profile & View Toggle -->
+                <div class="flex items-center space-x-4">
+                    <select id="viewToggle" class="bg-gray-100 border border-gray-300 rounded-md px-3 py-1">
+                        <option value="user">User View</option>
+                        <option value="admin">Admin View</option>
+                    </select>
+                    <button class="text-gray-400 hover:text-indigo-600">
+                        <i class="fas fa-user-circle text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- User View Content -->
+        <div id="userView" class="space-y-8">
+            <!-- Subscription Plans -->
+            <section>
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Business Subscription Plans</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Free Plan -->
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-semibold">Free Plan</h3>
+                            <span class="text-2xl font-bold">$0</span>
+                        </div>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Basic business listing
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Limited analytics
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Standard support
+                            </li>
+                        </ul>
+                        <button class="w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700 transition">
+                            Current Plan
+                        </button>
+                    </div>
+
+                    <!-- Premium Plan -->
+                    <div class="bg-white rounded-lg shadow-md p-6 border-2 border-indigo-500">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-semibold">Premium Plan</h3>
+                            <span class="text-2xl font-bold">$29.99</span>
+                        </div>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Featured business listing
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Advanced analytics
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Priority support
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Ad promotion credits
+                            </li>
+                        </ul>
+                        <button class="w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700 transition">
+                            Upgrade Now
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ad Management -->
+            <section>
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Advertisement Management</h2>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <div class="mb-6">
+                        <h3 class="text-lg font-semibold mb-4">Current Ads</h3>
+                        <div class="space-y-4">
+                            <div class="border rounded-lg p-4">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <h4 class="font-medium">Summer Sale Promotion</h4>
+                                        <p class="text-sm text-gray-500">Active until Aug 31, 2024</p>
+                                    </div>
+                                    <button class="text-indigo-600 hover:text-indigo-800">
+                                        Edit
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="border rounded-lg p-4">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <h4 class="font-medium">Festival Special Offer</h4>
+                                        <p class="text-sm text-gray-500">Starting Sep 1, 2024</p>
+                                    </div>
+                                    <button class="text-indigo-600 hover:text-indigo-800">
+                                        Edit
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">
+                        Create New Ad
+                    </button>
+                </div>
+            </section>
+        </div>
+
+        <!-- Admin View Content -->
+        <div id="adminView" class="space-y-8 hidden">
+            <!-- Business Approvals -->
+            <section>
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Business Approvals</h2>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Business Name
+                                </th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Category
+                                </th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Status
+                                </th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Actions
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm font-medium text-gray-900">Heritage Crafts</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-500">Artisan</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">
+                                        Pending
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                    <button class="text-green-600 hover:text-green-900 mr-3">Approve</button>
+                                    <button class="text-red-600 hover:text-red-900">Reject</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm font-medium text-gray-900">Cultural Tours</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-500">Tourism</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">
+                                        Pending
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                    <button class="text-green-600 hover:text-green-900 mr-3">Approve</button>
+                                    <button class="text-red-600 hover:text-red-900">Reject</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Revenue Analytics -->
+            <section>
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Revenue Analytics</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-lg font-semibold mb-2">Total Revenue</h3>
+                        <p class="text-3xl font-bold text-indigo-600">$12,450</p>
+                        <p class="text-sm text-gray-500">+12% from last month</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-lg font-semibold mb-2">Active Subscriptions</h3>
+                        <p class="text-3xl font-bold text-indigo-600">245</p>
+                        <p class="text-sm text-gray-500">+8% from last month</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-lg font-semibold mb-2">Pending Approvals</h3>
+                        <p class="text-3xl font-bold text-indigo-600">12</p>
+                        <p class="text-sm text-gray-500">-3 from last week</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        // View Toggle Functionality
+        const viewToggle = document.getElementById('viewToggle');
+        const userView = document.getElementById('userView');
+        const adminView = document.getElementById('adminView');
+
+        viewToggle.addEventListener('change', function() {
+            if (this.value === 'admin') {
+                userView.classList.add('hidden');
+                adminView.classList.remove('hidden');
+            } else {
+                adminView.classList.add('hidden');
+                userView.classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
